@@ -16,7 +16,7 @@ Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for us
 - Proxy: A load balancer for pods
 - Replication Controller: Manages replication of pods
 
-##_Using Minikube_
+## _Using Minikube_
 
 Running a Kubernetes environment using [Minikube ](https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/)for simplicity purpose.
 
@@ -84,6 +84,8 @@ Think of it like apt/yum/homebrew for Kubernetes.
 
 - Charts can be stored on disk, or fetched from remote chart repositories (like Debian or RedHat packages) it users git 
 under the hood
+
+#### Helm package can be found here: [helm-selenium ](https://kubeapps.com/charts/stable/selenium)
 
 To get started, its as simple as:
 ```

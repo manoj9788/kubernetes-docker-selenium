@@ -1,6 +1,6 @@
-##Kubernetes-docker-selenium
+## Kubernetes-docker-selenium
 
-###Orchestrating docker-selenium via Kubernetes
+### Orchestrating docker-selenium via Kubernetes
 
 
 Kubernetes is a platform for hosting Docker containers in a clustered environment with multiple Docker hosts. Kubernetes is a system for managing containerized applications across a cluster of nodes.  
@@ -20,16 +20,16 @@ Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for us
 
 Running a Kubernetes environment using [Minikube ](https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/)for simplicity purpose.
 
-###Launching selenium hub
+### Launching selenium hub
 ```
 $ kubectl run selenium-hub --image selenium/hub:3.4.0 --port 4444
 ```
-####Exposing selenium-hub to be able to access externally
+#### Exposing selenium-hub to be able to access externally
 ```
 $ kubectl expose deployment selenium-hub --type=NodePort
 ```
 
-####To Access the selenium-hub url
+#### To Access the selenium-hub url
 ```
 $ minikube service selenium-hub --url
 
@@ -37,7 +37,7 @@ It would show something like,
 http://192.168.99.100:xxxx
 ```
 
-###Bringing up Selenium Nodes
+### Bringing up Selenium Nodes
 ```
 $ kubectl run selenium-node-chrome --image selenium/node-chrome:3.4.0 --env="HUB_PORT_4444_TCP_ADDR=selenium-hub" --env="HUB_PORT_4444_TCP_PORT=4444"
 ```
@@ -72,7 +72,7 @@ $kubectl create -f selenium-node-chrome-rc.yaml
 $kubectl create -f selenium-node-firefox-rc.yaml
 ```
 
-##_Using Helm_
+## _Using Helm_
 
 Helm is a tool that streamlines installing and managing Kubernetes applications. 
 Think of it like apt/yum/homebrew for Kubernetes.

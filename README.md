@@ -44,9 +44,8 @@ $ kubectl run selenium-node-chrome --image selenium/node-chrome:3.4.0 --env="HUB
 
 ```
 $ kubectl run selenium-node-firefox --image selenium/node-firefox:3.4.0 --env="HUB_PORT_4444_TCP_ADDR=selenium-hub" --env="HUB_PORT_4444_TCP_PORT=4444"
-
 ```
-###Scaling Selenium Grid cluster
+### Scaling Selenium Grid cluster
 ```
 $ kubectl run selenium-node-chrome --image selenium/node-chrome:3.4.0 --env="HUB_PORT_4444_TCP_ADDR=selenium-hub" --env="HUB_PORT_4444_TCP_PORT=4444"
 ```

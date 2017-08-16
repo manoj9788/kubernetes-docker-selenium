@@ -3,15 +3,15 @@ kind: ReplicationController
 metadata:
   name: selenium-hub
   labels:
-    app: selenium-hub
+    name: selenium-hub
 spec:
   replicas: 1
   selector:
-    app: selenium-hub
+    name: selenium-hub
   template:
     metadata:
       labels:
-        app: selenium-hub
+        name: selenium-hub
     spec:
       containers:
       - name: selenium-hub
